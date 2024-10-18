@@ -1,0 +1,700 @@
+/* Uniform Styles */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+/* Styles for the main header section */
+.venia_header {
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	background-color: #1363DF;
+	display: flex;
+	padding: 0 20px;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.venia_header__container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Logo block styles for branding */
+.venia_header__logo {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.venia_header__logo-img {
+	max-height: 50px;
+}
+
+/* Styles for the navigation menu layout */
+.venia_header__nav {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+
+.venia_header__menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	gap: 20px;
+	display: flex;
+}
+
+.venia_header__menu-item {
+	text-transform: uppercase;
+}
+
+.venia_header__menu-link {
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 15px;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+.venia_header__menu-link:hover {
+	background-color: #6cc0f5;
+	border-radius: 4px;
+}
+
+/* Styles for the cart icon display */
+.venia_header__cart {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.venia_header__cart-icon {
+	max-height: 30px;
+}
+
+/* Styles for the mobile navigation hamburger menu */
+.hamburger {
+	width: 30px;
+	height: 30px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.hamburger div {
+	width: 30px;
+	height: 3px;
+	border-radius: 5px;
+	background: white;
+	transition: all 1.5s linear;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.venia_header__container {
+		justify-content: space-between;
+	}
+
+	.venia_header__nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.venia_header__logo {
+		order: 2;
+	}
+
+	.venia_header__cart {
+		order: 3;
+	}
+}
+
+@media (max-width: 769px) {
+	.filter {
+		position: fixed;
+		display: none;
+		width: 100%;
+		top: 80px;
+		left: 0;
+		border-width: 5px 10px 10px 10px;
+		background-color: white;
+		padding: 20px;
+		z-index: 999;	
+	}
+  
+	.filter.active {
+		display: block;
+	}
+  
+	.hamburger {
+		display: flex;
+	}
+
+
+}
+
+/* Styles for the promotional banner */
+.venia_banner-container {
+	display: flex;
+	max-width: 1440px;
+	justify-content: space-between;
+}
+
+.venia_banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.venia_banner-box {
+	display: flex;
+	flex-flow: column;
+	width: 425px;
+	height: 250px;
+	background-color: #1B252C;
+	color: white;
+}
+
+.venia_banner-text {
+	font-size: 2.5em;
+	text-align: center;
+}
+
+.venia_banner-underline {
+	height: 7px;
+	width: 40%;
+	background-color: #1363DF;
+}
+
+.venia_banner-image {
+	flex: 1;
+	overflow: hidden;
+}
+.venia_banner-img {
+	height: 225px;
+	width: 100%;
+	display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 320px) {
+	.venia_banner-container {
+		flex-direction: column;
+	}
+	.venia_banner-image {
+		order: 1;
+	}
+	.venia_banner-box {
+		order: 2;
+		width: 100%;
+	}
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+	.venia_banner-container {
+		flex-direction: column;
+	}
+
+	.venia_banner-image {
+		order: 1;
+	}
+
+	.venia_banner-box {
+		height: 190px;
+		width: 90%;
+		margin-left: 5%;
+		order: 2;
+		position: relative;
+		bottom: 66px;	
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.venia_banner-container {
+		flex-direction: row;
+	}
+
+	.venia_banner-box {
+		order: 1;
+	}
+
+	.venia_banner-image {
+		order: 2;
+	}
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.venia_banner-container {
+		flex-direction: row;
+	}
+
+	.venia_banner-box {
+		order: 1;
+	}
+
+	.venia_banner-image {
+		order: 2;
+	}
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+	.venia_banner-container {
+		flex-direction: row;
+	}
+
+	.venia_banner-box {
+		order: 1;
+	}
+
+	.venia_banner-image {
+		order: 2;
+	}
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+	.venia_banner-container {
+		flex-direction: row;
+	}
+
+	.venia_banner-box {
+		order: 1;
+	}
+
+	.venia_banner-image {
+		order: 2;
+	}
+}
+
+/* Styles for the main content area */
+.main {
+	display: flex;
+	justify-content: space-between;
+	margin: -19px 115px;
+	padding: 20px;
+}
+
+.main__filters {
+	width: 30%;
+	padding: 20px;
+}
+
+.filter {
+	padding: 20px;
+}
+
+.filter__category {
+	display: flex;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+/* Styles for the product list layout */
+.products {
+	width: 80%;
+	padding: 20px;
+}
+
+.products__header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+.products__count {
+	color: #333;
+	font-size: 1.2em;
+}
+
+.products__sort {
+	display: flex;
+	align-items: center;
+}
+
+.products__sort-select {
+	margin-left: 10px;
+	padding: 5px;
+}
+
+.products__list {
+	grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	gap: 20px;
+}
+
+.products__load-more {
+	background-color: #1363DF;
+	color: white;	
+	margin: 20px auto;
+	padding: 10px 20px;
+	border: none;
+	display: block;
+	width: 200px;
+	cursor: pointer;
+}
+
+/* Styles for individual product cards */
+.products__item {
+	transition: box-shadow 0.3s ease;
+}
+
+.product__image {
+	background-color: #f3f3f3;
+	text-align: center;
+	margin-bottom: 11px;
+}
+
+.product__image img {
+	height: 320px;
+	max-width: 100%;
+	mix-blend-mode: multiply;
+	margin-bottom: 15px;
+	object-fit: contain;
+}
+
+.price,
+.product_title {
+	font-size: 16px;
+	color: #292929;
+	margin-bottom: 8px;
+}
+
+.product_title {
+	font-weight: 600;
+}
+
+.products__item:hover {
+	cursor: pointer;
+}
+
+
+.products__price-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: auto;
+	align-items: center;
+}
+
+.products__like-button {
+	display: inline-flex;
+	background-color: transparent;
+	font-size: 24px;
+	border: none;
+	cursor: pointer;
+	color: #ff4081;
+	transition: color 1.5s;
+	
+}
+.filter__search{
+	height: 30px;
+    width: 90%;
+
+}
+/* Styles for filter section on mobile devices */
+
+.filter-sort-container {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+
+.filter-button, .sort-button {
+    display: flex;
+    align-items: center;
+	font-size: 16px;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.filter-button .filter-icon,
+.sort-button .sort-icon {
+    margin-right: 5px; 
+}
+
+  /* Responsive styles for both desktop and mobile devices */
+
+  .filterMobile{
+	display: none;
+  }
+  .filter-sort-container {
+    align-items: center;
+    gap: 20px;
+        }
+
+        .filter-button, .sort-button {
+            display: flex;
+            align-items: center;
+			background: none;
+            border: none;
+            font-size: 16px;            
+            text-decoration: underline;
+			cursor: pointer;
+        }
+
+        .filter-button .filter-icon,
+        .sort-button .sort-icon {
+            margin-right: 5px;
+        }
+
+
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+        margin: 20px 0px;
+		bottom: 80px;
+        position: relative;
+	}
+
+	.main__filters {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.products {
+		width: 100%;
+        padding:0px;
+	}
+	.main__filters {
+        padding: 0px;
+    }
+
+	.products__item img {
+	   height: 196px;
+	   width: 164px;
+	}
+
+	.products__list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.filterMobile{
+		display: block;
+	  }
+	  .products__sort-select {
+       display: none;
+	}
+	.products__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	.filter-sort-container {
+		justify-content: center;
+		gap: 20px;
+		margin-top: 10px;
+		display: flex;
+		
+	}
+}
+
+/* Adds a shimmer animation to simulate loading for product cards */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.shimmer {
+  background-color: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: shimmer 2s infinite linear;
+}
+
+.skeletonCard {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 320px; 
+}
+
+.shimmer-wrapper {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .shimmer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .shimmer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Footer Styles */
+.venia_footer-section__links {
+	display: flex;
+	padding: 40px 139px;	
+	justify-content: space-between;
+}
+
+.venia_footer-section__bottom {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid #e5e5e7;
+	padding: 40px 139px;	
+}
+
+.venia_footer-block {
+	width: 250px;
+}
+
+.venia_footer-block__title {
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.venia_footer-block__link {
+	margin-bottom: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #333;
+}
+
+.venia_footer-block__description {
+	margin-bottom: 20px;
+	font-size: 0.9em;
+	color: #666;
+}
+
+.venia_footer-block__socials {
+	display: flex;
+	gap: 15px;
+
+}
+
+.venia_footer-block__socials img {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+
+.venia_footer-block__legal {
+	display: flex;
+	text-decoration: underline;
+	gap: 20px;
+}
+
+.venia_footer-block__legal-link {
+	cursor: pointer;
+}
+
+.venia_footer-logo {
+	height: 23px;
+	width: 100px;
+}
+
+.venia_footer-section__copy {
+	font-size: 0.9em;
+	color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+	.venia_footer-section__links,
+	.venia_footer-section__bottom {
+		flex-direction: column;
+		padding: 40px 20px;
+		gap: 20px;
+		position: relative;
+		display: flex;        
+        bottom: 100px;
+	}
+.venia_footer-section__bottom{
+flex-direction: column-reverse;
+}
+	.venia_footer-block {
+		width: 100%;
+	}
+
+	.venia_footer-section__bottom {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.venia_footer-section__links {
+		gap: 20px;
+	}
+
+}
+
+
+.breadcrumb {
+	display: flex;
+	list-style: none;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+.breadcrumb__item {
+	margin-right: 10px;
+}
+
+.breadcrumb__link {
+	text-decoration: none;
+	color: #000000;
+	transition: color 0.3s;
+}
+
+.breadcrumb__link:hover {
+	color: #a1a5aa;
+}
+
+.breadcrumbs__links--active {
+    color: #857c7c;
+    font-weight: 500;
+} 
+.breadcrumb__separator {
+	margin-right: 10px;
+	color: #000000;
+
+}
+
+@media (max-width: 768px) {
+	.venia_footer__links {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

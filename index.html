@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="venia_product_listing.css" />
+</head>
+<body>
+
+<header class="venia_header">
+    <div class="venia_header__container">
+        <button class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <a href="#" class="venia_header__logo">
+            <img src="images/Venia.png" alt="Website Logo" class="venia_header__logo-img" />
+        </a>
+        <nav class="venia_header__nav" id="nav">
+            <ul class="venia_header__menu">
+                <li class="venia_header__menu-item"><a href="#" class="venia_header__menu-link">Home</a></li>
+                <li class="venia_header__menu-item"><a href="#" class="venia_header__menu-link">Women</a></li>
+                <li class="venia_header__menu-item"><a href="#" class="venia_header__menu-link">Men</a></li>
+                <li class="venia_header__menu-item"><a href="#" class="venia_header__menu-link">Smart Gear</a></li>
+                <li class="venia_header__menu-item"><a href="#" class="venia_header__menu-link">Accessories</a></li>
+            </ul>
+        </nav>
+        <div class="venia_header__cart">
+            <img src="images/bag.png" alt="Cart" class="venia_header__cart-icon" />
+        </div>
+    </div>
+</header>
+
+<div class="venia_banner-container">
+    <div class="venia_banner venia_banner-box">
+        <div>
+            <h2 class="venia_banner-text">
+                Men's <br />
+                Outerwear
+            </h2>
+        </div>
+        <div class="venia_banner-underline"></div>
+    </div>
+    <div class="venia_banner venia_banner-image">
+        <img src="images/banner.JPG" alt="Banner Image" class="venia_banner-img" />
+    </div>
+</div>
+
+<main class="main">
+    <div class="main__filters">
+        <div>
+            <nav>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Clothing</a></li>
+                    <span class="breadcrumb__separator">/</span>
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Women’s</a></li>
+                    <span class="breadcrumb__separator">/</span>
+                    <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumbs__links--active" href="#">Outerwear</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="filter">
+            <h3 class="filter__title">Filters</h3>
+            <hr />
+            <p><b>Categories</b></p>
+            <br />
+            <div class="filter__categories">
+                <label class="filter__category"> <input type="checkbox" class="filter__category-checkbox" value="jewelery" /> Jewellery </label>
+                <label class="filter__category"> <input type="checkbox" class="filter__category-checkbox" value="electronics" /> Electronics </label>
+                <label class="filter__category"> <input type="checkbox" class="filter__category-checkbox" value="men's clothing" /> Men's Clothing </label>
+                <label class="filter__category"> <input type="checkbox" class="filter__category-checkbox" value="women's clothing" /> Women's Clothing </label>
+            </div>
+
+
+            <p class="filter__title"><b>Search</b></p>
+            <label for="search" class="filter__search">
+                <input type="text" class="filter__search" placeholder="Search products..." id="searchInput" />
+            </label>
+            <hr />
+            
+        </section>
+        <section class="filterMobile">
+            <div class="filter-sort-container">
+                <button class="filter-button">
+                    <span class="filter-icon"><img src="images/sliders.svg" alt=""></span>
+                    <span>Filter Results</span>
+                </button>
+            
+                <button class="sort-button">
+                    <span class="sort-icon"><img src="images/sorting.png" alt=""></span> 
+                    <span>Sort Products</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="products">
+        <div class="products__header">
+            <h2 class="products__count" id="totalProducts">Results 0</h2>
+            <div class="products__sort">
+                <select id="sort" class="products__sort-select">
+                    <option value="" disabled selected hidden>Sort by price</option> 
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products__list" id="productItems"></div>
+        <div id="shimmerWrapper" class="shimmer-wrapper">
+            <div class="skeletonCard shimmer"></div>
+            <div class="skeletonCard shimmer"></div>
+            <div class="skeletonCard shimmer"></div>
+        </div>
+
+
+        <button id="loadMoreBtn" class="products__load-more">Load More</button>
+    </section>
+</main>
+<footer>
+    <div class="venia_footer-section__links">
+        <div class="venia_footer-block">
+            <p class="venia_footer-block__title">Account</p>
+            <p class="venia_footer-block__link">Sign In</p>
+            <p class="venia_footer-block__link">Register</p>
+            <p class="venia_footer-block__link">Order Status</p>
+        </div>
+        <div class="venia_footer-block">
+            <p class="venia_footer-block__title">About Us</p>
+            <p class="venia_footer-block__link">Our Story</p>
+            <p class="venia_footer-block__link">Careers</p>
+        </div>
+        <div class="venia_footer-block">
+            <p class="venia_footer-block__title">Help</p>
+            <p class="venia_footer-block__link">Contact Us</p>
+            <p class="venia_footer-block__link">Order Status</p>
+            <p class="venia_footer-block__link">Returns</p>
+        </div>
+        <div class="venia_footer-block">
+            <p class="venia_footer-block__title">Follow Us!</p>
+            <p class="venia_footer-block__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            </p>
+            <div class="venia_footer-block__socials">
+                <img src="images/instagram.png" alt="Instagram" />
+                <img src="images/facebook.png" alt="Facebook" />
+                <img src="images/twitter.png" alt="Twitter" />
+            </div>
+        </div>
+    </div>
+    <div class="venia_footer-section__bottom">
+        <img src="images/Venia_Footer-removebg-preview.png" alt="Company Logo" class="venia_footer-logo" />
+        <p class="venia_footer-section__copy">&copy; 2024 Company Name, Address Ave, City Name, State ZIP</p>
+        <div class="venia_footer-block__legal">
+            <p class="venia_footer-block__legal-link">Terms of Use</p>
+            <p class="venia_footer-block__legal-link">Privacy Policy</p>
+        </div>
+    </div>
+</footer>
+
+<script src="venia_product_listing.js"></script>
+</body>
+</html>
